@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body background="b.jpg">
+
+    <center>
+        <h1>Details</h1></center>
+    <br>
+    <div class="container">
+        <form name="form" action="save.php" method="post">
+            <div class="form-group">
+                <h3>Profile</h3>
+                <br>
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" required="">
+                <br>
+                <label for="initial">Initial:</label>
+                <input type="text" class="form-control" placeholder="Enter initial" id="initial" name="initial">
+                <br>
+                <label for="phn">Phn:</label>
+                <input type="text" class="form-control" placeholder="Include country code" id="phn" name="phn" required="">
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required="">
+                <br>
+                <label for="address">Address:</label>
+                <textarea class="form-control" rows="5" id="address" placeholder="Enter full address" name="address" required=""></textarea>
+                <br>
+                <br>
+
+                <h3>Education</h3>
+                <br>
+                <label for="colg">College:</label>
+                <input type="text" class="form-control" id="colg" placeholder="Enter college name" name="colg" required="">
+                <br>
+                <label for="deg">Degree:</label>
+                <input type="text" class="form-control" id="deg" placeholder="Enter degree name" name="deg" required="">
+                <br>
+                <label for="cgpa">CGPA:</label>
+                <input type="text" class="form-control" id="cgpa" placeholder="Enter cgpa" name="cgpa" required="">
+                <br>
+                <br>
+
+                <label for="achievements">Achievements:</label>
+                <textarea class="form-control" rows="5" id="achievements" placeholder="Enter any few achievements" name="achievements"></textarea>
+                <br>
+                <br>
+                <label for="aoi">Areas of Interest:</label>
+                <textarea class="form-control" rows="5" id="aoi" placeholder="Enter area of interest seperated by commas" name="aoi" required=""></textarea>
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <center>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit" id="submit" value="submit">Save</button>
+
+            </center>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+
+</body>
+
+</html>

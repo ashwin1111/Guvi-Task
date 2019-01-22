@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Welcome
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="modal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body background="a.jpg">
+    <div class="container">
+        <h1 align="center">	welcome!!! </h1>
+        <p>
+            <h3>This site is about filling your Bio Data in html forms and it gets stored in MySql Database and also in JSON format. Finally, retrieving it back to you from JSON file...</h3></p>
+        <h1 id="ab">
+	flow of events
+</h1>
+        <ul class="list-group">
+            <li class="list-group-item">Register</li>
+            <li class="list-group-item">Login</li>
+            <li class="list-group-item">Fill Details</li>
+            <li class="list-group-item">Display Details</li>
+            <li class="list-group-item">Share Details(optional)</li>
+        </ul>
+        <br>
+        <br>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary btn-lg center-block z" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Proceed to Register</button>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary btn-lg center-block zz" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Proceed to Login</button>
+        </div>
+    </div>
+    <br>
+    <div id="id01" class="modal">
+
+        <form name="form" action="login_check.php" class="modal-content animate" method="POST">
+            <div class="form-group">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <br>
+                <i class="fa fa-envelope icon"></i>
+                <label for="email">Email:</label>
+
+                <input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2">
+                <br>
+                <i class="fa fa-key icon"></i>
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="password2" id="password2">
+
+                <br>
+                <br>
+                <center>
+                    <button class="btn btn-primary btn-lg btn-block" name="log">Login</button>
+                </center>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal">
+        <form name="form" action="register.php" class="modal-content animate" method="post">
+            <div class="form-group">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <br>
+                <i class="fa fa-envelope icon"></i>
+                <label for="email">Email:</label>
+
+                <input type="email" class="form-control" id="email1" placeholder="Enter email" name="email1">
+                <br>
+                <i class="fa fa-key icon"></i>
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="password1" id="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onfocus="myFunction2()" required>
+                <br>
+
+                <br>
+                <input type="checkbox" value="click" onclick="myFunction()"> Show Password
+                <br>
+                <br>
+                <center>
+                    <button class="btn btn-primary btn-lg btn-block" id="mySubmit">Signup</button>
+                </center>
+
+            </div>
+            <div id="message">
+                <h4>Password must contain the following:</h4>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b> and Maximum <b>20 characters</b></p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
